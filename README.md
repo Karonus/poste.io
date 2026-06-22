@@ -1,4 +1,3 @@
 # Poste.io with custom ClamAV mirror
 
-Used the https://packages.microsoft.com/clamav/ mirror for ClamAV database updates.
-
+Used the clamav-mirror.ru mirror for ClamAV database updates.
