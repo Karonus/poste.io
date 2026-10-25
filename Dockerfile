@@ -1,5 +1,9 @@
 ARG IMAGE_TAG=latest
 FROM analogic/poste.io:${IMAGE_TAG}
 
-RUN echo "PrivateMirror https://clamav-mirror.ru" >> /etc/freshclam.conf
-RUN echo "ScriptedUpdates no" >> /etc/freshclam.conf
+RUN cat <<EOF >> /etc/freshclam.conf
+PrivateMirror https://clamav-mirror.ru/
+PrivateMirror https://mirror.truenetwork.ru/clamav/
+PrivateMirror http://mirror.truenetwork.ru/clamav/
+ScriptedUpdates no
+EOF
